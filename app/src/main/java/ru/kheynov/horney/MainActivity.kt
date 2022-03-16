@@ -3,7 +3,7 @@ package ru.kheynov.horney
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import ru.kheynov.horney.screens.MainScreen
+import ru.kheynov.horney.screens.CardDeck
 import ru.kheynov.horney.ui.theme.HorneyTheme
 
 class MainActivity : ComponentActivity() {
@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             HorneyTheme {
-                MainScreen()
+                CardDeck()
             }
         }
     }

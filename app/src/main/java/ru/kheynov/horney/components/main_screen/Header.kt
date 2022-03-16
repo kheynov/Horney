@@ -1,4 +1,4 @@
-package ru.kheynov.horney.components
+package ru.kheynov.horney.components.main_screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row

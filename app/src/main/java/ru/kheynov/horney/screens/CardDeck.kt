@@ -9,14 +9,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import ru.kheynov.horney.components.BottomNavigation
-import ru.kheynov.horney.components.Header
-import ru.kheynov.horney.components.UserCard
+import ru.kheynov.horney.components.main_screen.BottomNavigation
+import ru.kheynov.horney.components.main_screen.Header
+import ru.kheynov.horney.components.main_screen.UserCard
 import ru.kheynov.horney.ui.theme.HorneyTheme
 
 
 @Composable
-fun MainScreen() {
+fun CardDeck() {
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colors.background
@@ -55,8 +55,8 @@ fun MainScreen() {
     uiMode = Configuration.UI_MODE_NIGHT_YES,
     name = "dark")
 @Composable
-fun MainScreenPreview() {
+fun CardDeckPreview() {
     HorneyTheme {
-        MainScreen()
+        CardDeck()
     }
 }
