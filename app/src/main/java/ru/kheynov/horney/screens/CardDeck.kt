@@ -9,9 +9,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import ru.kheynov.horney.components.main_screen.BottomNavigation
-import ru.kheynov.horney.components.main_screen.Header
-import ru.kheynov.horney.components.main_screen.UserCard
+import ru.kheynov.horney.components.card_deck.BottomNavigation
+import ru.kheynov.horney.components.card_deck.Header
+import ru.kheynov.horney.components.card_deck.UserCard
 import ru.kheynov.horney.ui.theme.HorneyTheme
 
 
