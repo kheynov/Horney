@@ -1,4 +1,4 @@
-package ru.kheynov.horney.components
+package ru.kheynov.horney.components.main_screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -13,12 +13,15 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import ru.kheynov.domain.utility.BottomNavigationState
 import ru.kheynov.horney.R
 
 @Composable
 fun BottomNavigation(
     modifier: Modifier = Modifier,
     elevation: Dp = 10.dp,
+    navState: BottomNavigationState = BottomNavigationState.MainScreen,
+    onStateChanged: (BottomNavigationState) -> Unit = {},
 ) {
     Surface(
         modifier = modifier
