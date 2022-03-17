@@ -38,17 +38,7 @@ fun BottomNavigationBar(navController: NavController) {
                 alwaysShowLabel = true,
                 onClick = {
                     if (currentRoute != item.route) {
-                        navController.navigate(item.route) {
-                            navController.graph.startDestinationRoute?.let { route ->
-                                popUpTo(route) {
-                                    saveState = true
-                                }
-                                launchSingleTop = true
-                                restoreState = true
-                            }
-
-                        }
-
+                        navController.navigate(item.route)
                     }
                 },
             )
