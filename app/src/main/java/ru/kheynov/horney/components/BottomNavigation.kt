@@ -1,5 +1,6 @@
 package ru.kheynov.horney.components
 
+import android.graphics.drawable.AnimationDrawable
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
@@ -29,8 +30,7 @@ fun BottomNavigationBar(navController: NavController) {
         navItems.forEach { item ->
             BottomNavigationItem(
                 icon = {
-                    Icon(painter =
-                    if (currentRoute == item.route) painterResource(item.selectedIconId)
+                    Icon(painter = if (currentRoute == item.route) painterResource(item.selectedIconId)
                     else painterResource(item.iconId),
                         contentDescription = item.title)
                 },
@@ -38,7 +38,7 @@ fun BottomNavigationBar(navController: NavController) {
                 selectedContentColor = MaterialTheme.colors.onSurface,
                 unselectedContentColor = Color.White,
                 selected = currentRoute == item.route,
-                alwaysShowLabel = true,
+                alwaysShowLabel = false,
                 onClick = {
                     if (currentRoute != item.route) {
                         navController.navigate(item.route) {
