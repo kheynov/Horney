@@ -3,12 +3,14 @@ package ru.kheynov.horney.components.card_deck
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
@@ -34,6 +36,7 @@ fun UserCard(
             horizontalArrangement = Arrangement.Center) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 GlideImage(
+                    modifier = Modifier.padding(5.dp).clip(shape = shape),
                     imageModel = "https://picsum.photos/400/600",
                     shimmerParams = ShimmerParams(
                         baseColor = MaterialTheme.colors.surface,
@@ -47,7 +50,8 @@ fun UserCard(
                             .diskCacheStrategy(DiskCacheStrategy.NONE)
                             .centerCrop()
                     },
-                    contentScale = ContentScale.FillBounds
+                    contentScale = ContentScale.FillBounds,
+
                 )
             }
         }
