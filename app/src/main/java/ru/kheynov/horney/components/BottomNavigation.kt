@@ -1,6 +1,7 @@
 package ru.kheynov.horney.components
 
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -21,21 +22,23 @@ fun BottomNavigationBar(navController: NavController) {
     )
     BottomNavigation(
         backgroundColor = MaterialTheme.colors.surface,
-        modifier = Modifier.height(70.dp)
+        modifier = Modifier.height(80.dp)
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
         navItems.forEach { item ->
             BottomNavigationItem(
                 icon = {
-                    Icon(painter = painterResource(item.iconId),
+                    Icon(painter =
+                    if (currentRoute == item.route) painterResource(item.selectedIconId)
+                    else painterResource(item.iconId),
                         contentDescription = item.title)
                 },
                 label = { Text(text = item.title) },
                 selectedContentColor = MaterialTheme.colors.onSurface,
                 unselectedContentColor = Color.White,
                 selected = currentRoute == item.route,
-                alwaysShowLabel = false,
+                alwaysShowLabel = true,
                 onClick = {
                     if (currentRoute != item.route) {
                         navController.navigate(item.route) {

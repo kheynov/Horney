@@ -38,12 +38,8 @@ fun CardDeck() {
                         .padding(top = 26.dp)
                         .weight(14f)
                 )
-                Spacer(modifier = Modifier.weight(0.7f))
+                Spacer(modifier = Modifier.weight(1.2f))
             }
-//            BottomNavigation(modifier = Modifier
-//                .weight(2f),
-//                elevation = 10.dp
-//            )
         }
     }
 }
