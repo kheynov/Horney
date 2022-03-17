@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun Header(
     modifier: Modifier = Modifier,
-    fontSize: TextUnit = 36.sp,
+    fontSize: TextUnit = 38.sp,
 ) {
     Row(modifier = modifier,
         horizontalArrangement = Arrangement.Center,
