@@ -1,4 +1,4 @@
-package ru.kheynov.domain.utility
+package ru.kheynov.horney.utility
 
 sealed class BottomNavigationState{
     object CardDeckScreen : BottomNavigationState()

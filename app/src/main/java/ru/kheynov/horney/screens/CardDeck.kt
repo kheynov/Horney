@@ -49,7 +49,7 @@ fun CardDeck() {
                     ProfileCard(listOf("https://picsum.photos/850/1000")),
                     ProfileCard(listOf("https://picsum.photos/800/1200")),
                     ProfileCard(listOf("https://picsum.photos/800/900")),
-                        ProfileCard(listOf("https://picsum.photos/800/1000")),
+                    ProfileCard(listOf("https://picsum.photos/800/1000")),
                     ProfileCard(listOf("https://picsum.photos/850/1000")),
                     ProfileCard(listOf("https://picsum.photos/800/1200")),
                     ProfileCard(listOf("https://picsum.photos/800/900")),
