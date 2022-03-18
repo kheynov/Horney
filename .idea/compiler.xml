@@ -3,6 +3,8 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="Horney.app" target="11" />
+      <module name="Horney.data" target="11" />
+      <module name="Horney.KardSwyper" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

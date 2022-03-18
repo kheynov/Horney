@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "Horney"
 include ':app'
 include ':domain'
+include ':KardSwyper'
+include ':data'
