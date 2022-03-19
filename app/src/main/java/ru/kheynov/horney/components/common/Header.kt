@@ -1,4 +1,4 @@
-package ru.kheynov.horney.components.card_deck
+package ru.kheynov.horney.components.common
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
