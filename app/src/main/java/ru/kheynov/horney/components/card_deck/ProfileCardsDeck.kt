@@ -53,7 +53,7 @@ fun ProfileCardsDeck(
                             .diskCacheStrategy(DiskCacheStrategy.NONE)
                             .centerCrop()
                     },
-                    contentScale = ContentScale.FillBounds,
+                    contentScale = ContentScale.FillHeight,
 
                     )
             }
