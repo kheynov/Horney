@@ -23,18 +23,10 @@ fun CardDeck() {
             .padding(bottom = 55.dp),
         color = MaterialTheme.colors.background
     ) {
-        Column(
-            Modifier.fillMaxSize(),
-
-            ) {
             Column(Modifier
-                .weight(20f)
                 .fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally) {
-                Header(Modifier
-                    .padding(top = 32.dp)
-                    .weight(1.9f))
-
+                Header()
                 val items = mutableListOf(
                     ProfileCard(listOf("https://picsum.photos/800/1000")),
                     ProfileCard(listOf("https://picsum.photos/850/1000")),
@@ -53,7 +45,6 @@ fun CardDeck() {
                         .weight(14f),
                 )
                 Spacer(modifier = Modifier.weight(1.5f))
-            }
         }
     }
 }
