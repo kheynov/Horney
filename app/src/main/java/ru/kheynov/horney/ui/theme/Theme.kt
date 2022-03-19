@@ -20,6 +20,8 @@ private val LightColorPalette = lightColors(
     primaryVariant = Violet500,
     secondary = Violet500,
     background = LightBackground,
+    surface = LightSurface,
+    onSurface = LightOnSurface,
 )
 
 @Composable

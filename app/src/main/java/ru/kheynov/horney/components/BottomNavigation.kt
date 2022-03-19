@@ -33,7 +33,7 @@ fun BottomNavigationBar(navController: NavController) {
                 },
                 label = { Text(text = item.title) },
                 selectedContentColor = MaterialTheme.colors.onSurface,
-                unselectedContentColor = MaterialTheme.colors.onSurface.copy(alpha = 0.4f),
+                unselectedContentColor = MaterialTheme.colors.onSurface.copy(alpha = 0.6f),
                 selected = currentRoute == item.route,
                 alwaysShowLabel = true,
                 onClick = {
