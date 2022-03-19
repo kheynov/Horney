@@ -11,7 +11,6 @@ import ru.kheynov.horney.components.BottomNavigationBar
 import ru.kheynov.horney.ui.theme.HorneyTheme
 import ru.kheynov.horney.utility.Navigation
 
-@ExperimentalAnimationApi
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +22,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@ExperimentalAnimationApi
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()

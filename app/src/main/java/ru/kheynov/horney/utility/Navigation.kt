@@ -1,9 +1,6 @@
 package ru.kheynov.horney.utility
 
-import androidx.compose.animation.*
-import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -11,20 +8,19 @@ import ru.kheynov.horney.screens.CardDeck
 import ru.kheynov.horney.screens.LikesScreen
 import ru.kheynov.horney.screens.ProfileScreen
 
-@ExperimentalAnimationApi
 @Composable
 fun Navigation(navController: NavHostController) {
     NavHost(navController = navController, startDestination = NavigationItem.CardDeck.route) {
         composable(
             NavigationItem.CardDeck.route
         ) {
-                CardDeck()
+            CardDeck()
         }
         composable(NavigationItem.Likes.route) {
-                LikesScreen()
+            LikesScreen()
         }
         composable(NavigationItem.Profile.route) {
-                ProfileScreen()
+            ProfileScreen()
         }
     }
 }
