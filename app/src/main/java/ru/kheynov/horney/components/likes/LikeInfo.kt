@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -64,6 +65,7 @@ fun LikeInfo(
                 Text(
                     text = "${profileCard.name}, ${profileCard.age}",
                     style = MaterialTheme.typography.h2,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = 24.sp,
                     color = MaterialTheme.colors.onBackground
                 )
@@ -74,7 +76,7 @@ fun LikeInfo(
                     style = MaterialTheme.typography.body1,
                     fontSize = 16.sp,
                     textAlign = TextAlign.Justify,
-                    color = MaterialTheme.colors.onBackground
+                    color = MaterialTheme.colors.onBackground.copy(0.7f)
                 )
             }
         }

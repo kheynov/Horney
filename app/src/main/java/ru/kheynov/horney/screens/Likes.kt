@@ -24,11 +24,11 @@ fun LikesScreen() {
         Column {
             Header()
 
-            Column(Modifier.padding(8.dp, bottom = 70.dp)) {
+            Column(Modifier.padding(horizontal = 12.dp).padding(bottom = 70.dp)) {
                 val items = mutableListOf(
                     ProfileCard(images = listOf("https://picsum.photos/800/1000"),
                         name = "Anna",
-                        age = 12),
+                        age = 21),
                     ProfileCard(images = listOf("https://picsum.photos/850/1000"),
                         name = "Maria",
                         age = 24),

@@ -29,7 +29,7 @@ fun ProfileScreen() {
                 verticalArrangement = Arrangement.Center) {
                 Text(
                     modifier = Modifier.fillMaxWidth(),
-                    text = "PROFILE WOULD BE THERE",
+                    text = "PROFILE WOULD BE HERE",
                     fontSize = 36.sp,
                     style = MaterialTheme.typography.h2,
                 textAlign = TextAlign.Center)
