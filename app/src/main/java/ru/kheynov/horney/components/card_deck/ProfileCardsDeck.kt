@@ -42,7 +42,6 @@ fun ProfileCardsDeck(
                 Box {
                     GlideImage(
                         modifier = Modifier
-
                             .clip(shape = RoundedCornerShape(10.dp)),
                         imageModel = it.images[0],
                         shimmerParams = ShimmerParams(
@@ -61,9 +60,10 @@ fun ProfileCardsDeck(
                     )
                     Box(modifier = Modifier
                         .background(brush = Brush.verticalGradient(colors = listOf(
-                            Color.Transparent, Color.Black), startY = 0f))
-                        .padding(8.dp) //TODO: Draw more beautiful shadow
+                            Color.Transparent, Color.Black), startY = 0f),
+                            shape = RoundedCornerShape(10.dp))
                         .fillMaxSize()
+                        //TODO: Draw more beautiful shadow
                     )
                 }
             }
