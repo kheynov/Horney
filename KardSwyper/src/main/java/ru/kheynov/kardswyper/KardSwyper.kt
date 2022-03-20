@@ -32,12 +32,13 @@ inline fun <reified T> KardSwyper(
         list.forEachIndexed { index, item ->
             key(item) {
                 val cardController = rememberCardController()
-                if (index == list.lastIndex) {
+                if (index == list.size-1) {
                     kardSwyperController.currentCardController = cardController
                 }
                 if (!cardController.isCardOut()) {
+                    val elevationCalculated = if (index == 0) elevation else 0.dp
                     Card(
-                        elevation = elevation,
+                        elevation = elevationCalculated,
                         shape = RoundedCornerShape(cornerRadius * 1.4f),
                         modifier = cardModifier
                             .pointerInput(Unit) {
