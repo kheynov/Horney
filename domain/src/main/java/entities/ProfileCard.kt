@@ -5,4 +5,5 @@ data class ProfileCard(
     val name: String = "Null",
     val age: Int = 0,
     val matchTime: String = "19/03/2022",
+    val aboutText: String = ""
 )
