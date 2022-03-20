@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -12,6 +13,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.skydoves.landscapist.ShimmerParams
@@ -58,13 +60,34 @@ fun ProfileCardsDeck(
                         },
                         contentScale = ContentScale.FillHeight,
                     )
-                    Box(modifier = Modifier
-                        .background(brush = Brush.verticalGradient(colors = listOf(
-                            Color.Transparent, Color.Black), startY = 0f),
-                            shape = RoundedCornerShape(10.dp))
-                        .fillMaxSize()
-                        //TODO: Draw more beautiful shadow
+                    Box(
+                        modifier = Modifier
+                            .background(brush = Brush.verticalGradient(colors = listOf(
+                                Color.Transparent, Color.Black), startY = 500f),
+                                shape = RoundedCornerShape(10.dp))
+                            .fillMaxSize(1f)
+                            .align(Alignment.BottomStart)//TODO: Draw more beautiful shadow
                     )
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(horizontal = 12.dp, vertical = 16.dp),
+                        verticalArrangement = Arrangement.Bottom,
+                    ) {
+                        Text(
+                            text = "${it.name}, ${it.age}",
+                            style = MaterialTheme.typography.h2,
+                            color = Color.White,
+                            fontSize = 36.sp,
+                        )
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Text(
+                            text = it.aboutText,
+                            style = MaterialTheme.typography.body1,
+                            color = Color.White,
+                            fontSize = 16.sp,
+                        )
+                    }
                 }
             }
         }
