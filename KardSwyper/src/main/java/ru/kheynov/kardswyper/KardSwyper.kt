@@ -20,7 +20,6 @@ inline fun <reified T> KardSwyper(
     onItemRemoved: (T, SwipeDirection) -> Unit,
     onEmpty: () -> Unit = {},
     kardSwyperController: KardSwyperController = rememberKardSwyperController(),
-    stackCount: Int = 8,
     elevation: Dp = 5.dp,
     cornerRadius: Dp = 10.dp,
     modifier: Modifier = Modifier,
@@ -28,7 +27,7 @@ inline fun <reified T> KardSwyper(
     crossinline renderItem: @Composable (T) -> Unit,
 ) {
     Box(modifier = modifier) {
-        val list = items.take(stackCount).reversed()
+        val list = items.reversed()
         list.forEachIndexed { index, item ->
             key(item) {
                 val cardController = rememberCardController()
