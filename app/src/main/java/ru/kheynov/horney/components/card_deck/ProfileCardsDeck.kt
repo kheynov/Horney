@@ -66,7 +66,7 @@ fun ProfileCardsDeck(
                                 Color.Transparent, Color.Black), startY = 500f),
                                 shape = RoundedCornerShape(10.dp))
                             .fillMaxSize(1f)
-                            .align(Alignment.BottomStart)//TODO: Draw more beautiful shadow
+                            .align(Alignment.BottomStart),//TODO: Draw more beautiful shadow
                     )
                     Column(
                         modifier = Modifier
