@@ -10,12 +10,14 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import entities.ProfileCard
+import ru.kheynov.data.repository.CardsRepositoryImpl
 import ru.kheynov.horney.components.common.Header
 import ru.kheynov.horney.components.likes.LikeInfo
+import use_cases.GetCardsUseCase
 
 @Composable
 fun LikesScreen() {
+    val cardsRepository = CardsRepositoryImpl()
     Surface(
         modifier = Modifier
             .fillMaxSize(),
@@ -24,33 +26,10 @@ fun LikesScreen() {
         Column {
             Header()
 
-            Column(Modifier.padding(horizontal = 12.dp).padding(bottom = 70.dp)) {
-                val items = mutableListOf(
-                    ProfileCard(images = listOf("https://picsum.photos/800/1000"),
-                        name = "Anna",
-                        age = 21),
-                    ProfileCard(images = listOf("https://picsum.photos/850/1000"),
-                        name = "Maria",
-                        age = 24),
-                    ProfileCard(images = listOf("https://picsum.photos/800/1200"),
-                        name = "Viktoria",
-                        age = 19),
-                    ProfileCard(images = listOf("https://picsum.photos/800/900"),
-                        name = "Vitaliy",
-                        age = 20),
-                    ProfileCard(images = listOf("https://picsum.photos/810/1000"),
-                        name = "Igor'",
-                        age = 21),
-                    ProfileCard(images = listOf("https://picsum.photos/830/1000"),
-                        name = "Samuel",
-                        age = 50),
-                    ProfileCard(images = listOf("https://picsum.photos/870/1200"),
-                        name = "Kyle",
-                        age = 18),
-                    ProfileCard(images = listOf("https://picsum.photos/890/900"),
-                        name = "Smith",
-                        age = 29),
-                )
+            Column(Modifier
+                .padding(horizontal = 12.dp)
+                .padding(bottom = 70.dp)) {
+                val items = GetCardsUseCase(cardsRepository = cardsRepository).invoke()
                 LazyColumn {
                     items(items.size) { idx ->
                         LikeInfo(
