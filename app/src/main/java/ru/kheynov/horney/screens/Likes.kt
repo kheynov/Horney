@@ -25,7 +25,6 @@ fun LikesScreen() {
     ) {
         Column {
             Header()
-
             Column(Modifier
                 .padding(horizontal = 12.dp)
                 .padding(bottom = 70.dp)) {
@@ -40,7 +39,6 @@ fun LikesScreen() {
                         )
                     }
                 }
-
             }
         }
     }
